@@ -1,0 +1,19 @@
+.content-text{
+    float: left;
+    height: 100%;
+    width: 600px;
+    padding-left: 200px;
+}
+.content{
+    height: 660px;
+    width: 100%;
+}
+.logo{
+    padding: 100px;
+    padding-left: 150px;
+    
+    align-content: center;
+}
+.logo img{
+    padding-left: 250px;
+}
