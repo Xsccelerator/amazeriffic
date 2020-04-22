@@ -1,3 +1,6 @@
+body{
+    background: lightcyan;
+}
 .content-text{
     float: left;
     height: 100%;
