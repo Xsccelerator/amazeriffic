@@ -4,19 +4,18 @@ body{
 .content-text{
     float: left;
     height: 100%;
-    width: 600px;
-    padding-left: 200px;
+    width: 650px;
+    padding-left: 220px;
 }
 .content{
-    height: 660px;
+    height: 680px;
     width: 100%;
+    overflow: auto;
 }
 .logo{
-    padding: 100px;
-    padding-left: 150px;
-    
-    align-content: center;
+    box-sizing: content-box;
+    display: inline-block;
+    padding-left: 360px;
+    padding-top: 50px;
 }
-.logo img{
-    padding-left: 250px;
-}
+
