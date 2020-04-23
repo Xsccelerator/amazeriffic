@@ -10,8 +10,8 @@ const toDos= [
   $(document).ready(function(){
     $('.collapsible').collapsible();
     $('.tabs').tabs();
-    handlerO()
-    handlerN()
+    oldTabView()
+    newTabView()
   });
  //////////////////////////////////////////////////
   $('.btn-center').on('click', function(){
@@ -33,13 +33,13 @@ const toDos= [
   })
   
 
-  var handlerO = function(e){  
+  var oldTabView = function(e){  
     var ulOld = $('.oldTodos').empty()
       toDos.forEach(function(item){
       ulOld.append($(`<li>${item}</li>`))
   })
 } 
-var handlerN = function(e){
+var newTabView = function(e){
   var ul = $('.newTodos').empty()
   toDos.forEach(function(item){
     ul.prepend($(`<li>${item}</li>`))
@@ -47,11 +47,14 @@ var handlerN = function(e){
 }
 ///////////////////////////////////////////////
 var tab = $('.tab')
+
  tab.on('click', function(e){
-    if(e.target.dataset.par === "new" ){
-      handlerN()    
+  let par = e.target.dataset.par
+  console.log(par)
+    if(par === "new" ){
+      newTabView()    
     }
-    if(e.target.dataset.par === "old" ){
-      handlerO()
+    if(par === "old" ){
+      oldTabView()
   }
 })
