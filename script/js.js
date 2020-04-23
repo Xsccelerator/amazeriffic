@@ -36,13 +36,13 @@ const toDos= [
   var handlerO = function(e){  
     var ulOld = $('.oldTodos').empty()
       toDos.forEach(function(item){
-      ulOld.prepend($(`<li>${item}</li>`))
+      ulOld.append($(`<li>${item}</li>`))
   })
 } 
 var handlerN = function(e){
   var ul = $('.newTodos').empty()
   toDos.forEach(function(item){
-    ul.append($(`<li>${item}</li>`))
+    ul.prepend($(`<li>${item}</li>`))
   })
 }
 ///////////////////////////////////////////////
