@@ -1,6 +1,10 @@
 var main = function(){
     'use strict'
-    $('h1').css('color', 'red')
+   //getJSON сразу интерпретирует JSON, поэтому
+   //нет необходимости вызывать JSON.parse
+   $.getJSON("cards/aceOfSpades.json", function(card){
+       console.log(card)
+   })
    
 }
 $(document).ready(main)
