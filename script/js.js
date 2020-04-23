@@ -13,55 +13,45 @@ const toDos= [
     handlerO()
     handlerN()
   });
-
-
-
- 
+ //////////////////////////////////////////////////
   $('.btn-center').on('click', function(){
-    $('.content').slideUp(700)
-    
+    $('.content').slideUp(700) 
   })
+ ////////////////////////////////////////// 
   
-  
-  var textArea = $('.text-area')
-  
+  var textArea = $('.text-area') 
   textArea.on('keypress', function(e){
     
-    if(e.code === "Enter"){
-      console.log('test')
-      var text = textArea.val()
-      toDos.push(text.toString())
-      e.preventDefault()
-      
-      toDos.forEach(function(item){
-        console.log(item)
-        textArea.val("")
-      })
-
+    if(e.code === "Enter"){  
+        var text = textArea.val()
+        toDos.push(text.toString())
+        e.preventDefault() 
+          toDos.forEach(function(item){
+                textArea.val("")
+          })
     }
   })
   
 
-  var handlerO = function(e){
-    
-  var ulOld = $('.oldTodos').empty()
-  toDos.forEach(function(item){
-    ulOld.prepend($(`<li>${item}</li>`))
+  var handlerO = function(e){  
+    var ulOld = $('.oldTodos').empty()
+      toDos.forEach(function(item){
+      ulOld.prepend($(`<li>${item}</li>`))
   })
-}
-  
+} 
 var handlerN = function(e){
   var ul = $('.newTodos').empty()
   toDos.forEach(function(item){
     ul.append($(`<li>${item}</li>`))
   })
 }
+///////////////////////////////////////////////
 var tab = $('.tab')
  tab.on('click', function(e){
     if(e.target.dataset.par === "new" ){
-      handlerN()
-      
-    }if(e.target.dataset.par === "old" ){
+      handlerN()    
+    }
+    if(e.target.dataset.par === "old" ){
       handlerO()
   }
 })
